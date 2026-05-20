@@ -1,0 +1,24 @@
+{
+  "name": "swansonx-bot",
+  "version": "1.0.0",
+  "description": "SwansonX — AI-powered Discord server setup bot",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsc -p tsconfig.json --watch",
+    "register": "node dist/scripts/register-commands.js"
+  },
+  "keywords": ["discord", "discord.js", "bot", "swansonx"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

@@ -5,8 +5,15 @@ exports.getCommandJSON = getCommandJSON;
 const discord_js_1 = require("discord.js");
 const ping_js_1 = require("../commands/ping.js");
 const setup_ai_js_1 = require("../commands/setup-ai.js");
+const server_clean_js_1 = require("../commands/server-clean.js");
+const server_wipe_js_1 = require("../commands/server-wipe.js");
 const logger_js_1 = require("../utils/logger.js");
-const ALL_COMMANDS = [ping_js_1.pingCommand, setup_ai_js_1.setupAiCommand];
+const ALL_COMMANDS = [
+    ping_js_1.pingCommand,
+    setup_ai_js_1.setupAiCommand,
+    server_clean_js_1.serverCleanCommand,
+    server_wipe_js_1.serverWipeCommand,
+];
 function loadCommands(client) {
     const collection = new discord_js_1.Collection();
     for (const cmd of ALL_COMMANDS) {

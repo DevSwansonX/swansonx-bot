@@ -2,9 +2,16 @@ import { Collection, type Client } from 'discord.js';
 import type { BotCommand } from '../types/template.js';
 import { pingCommand } from '../commands/ping.js';
 import { setupAiCommand } from '../commands/setup-ai.js';
+import { serverCleanCommand } from '../commands/server-clean.js';
+import { serverWipeCommand } from '../commands/server-wipe.js';
 import { logger } from '../utils/logger.js';
 
-const ALL_COMMANDS: BotCommand[] = [pingCommand, setupAiCommand];
+const ALL_COMMANDS: BotCommand[] = [
+  pingCommand,
+  setupAiCommand,
+  serverCleanCommand,
+  serverWipeCommand,
+];
 
 export type CommandCollection = Collection<string, BotCommand>;
 

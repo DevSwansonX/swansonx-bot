@@ -2,8 +2,20 @@ import type { ServerTemplate } from '../types/template.js';
 import { minecraftTemplate } from './minecraft.js';
 import { aiCommunityTemplate } from './ai-community.js';
 import { startupTemplate } from './startup.js';
+import { businessTemplate } from './business.js';
+import { supportTemplate } from './support.js';
+import { gamingTemplate } from './gaming.js';
+import { creatorTemplate } from './creator.js';
 
-const ALL: ServerTemplate[] = [minecraftTemplate, aiCommunityTemplate, startupTemplate];
+const ALL: ServerTemplate[] = [
+  minecraftTemplate,
+  aiCommunityTemplate,
+  startupTemplate,
+  businessTemplate,
+  supportTemplate,
+  gamingTemplate,
+  creatorTemplate,
+];
 
 const REGISTRY: Map<string, ServerTemplate> = new Map(ALL.map((t) => [t.id, t]));
 
